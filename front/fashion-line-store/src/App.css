@@ -1,0 +1,237 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenido de la modal */
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+/* Estilos para el título */
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Estilos de los inputs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #4A90E2;
+  outline: none;
+}
+
+/* Estilos del botón de cerrar */
+button {
+  padding: 10px 20px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+/* Estilo para el botón de cerrar */
+button.close-btn {
+  background-color: #ff4242;
+}
+
+button.close-btn:hover {
+  background-color: #ff1f1f;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-limpiar{
+  background-color: #5d4aff;
+}
+
+.btn-limpiar:hover{
+  background-color: #2912fe;
+}
+
+.btn-create-product {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-create-product:hover {
+  background-color: #45a049;
+}
+
+/* Botón para filtrar bajo inventario */
+.btn-filter {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.btn-filter:hover {
+  background-color: #d32f2f;
+}
+
+/* Input para definir el umbral de bajo inventario */
+.input-stock {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 180px;
+}
+
+.buttons-container {
+  display: flex; /* Alinea elementos en una fila */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 1rem; /* Espaciado entre elementos */
+  margin-top: 2rem; /* Añade espacio superior */
+}
+
+.btn-create-product,
+.btn-filter,
+.input-stock {
+  padding: 0.5rem 1rem; /* Tamaño de los botones */
+  font-size: 1rem; /* Tamaño del texto */
+  border: 1px solid #ccc; /* Borde para los botones e input */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.input-stock {
+  width: 200px; /* Ancho del input */
+}
+
+.low-stock-alert {
+  background-color: #fff4e5;
+  border: 1px solid #ffa726;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 20px 0;
+  color: #ef6c00;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.low-stock-alert h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d84315;
+}
+
+.low-stock-alert ul {
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.low-stock-alert li {
+  font-size: 16px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ffe0b2;
+}
+
+.low-stock-alert li:last-child {
+  border-bottom: none;
+}
